@@ -28,7 +28,6 @@ mybatis-plus:
   mapper-locations: classpath:/mybatis/mappers/*.xml
   configuration:
     map-underscore-to-camel-case: true  #自动开启驼峰规则映射
-    
 ---  #8005端口定义dev
 server:
   port: 8005
@@ -51,3 +50,11 @@ eureka:
       defaultZone: http://localhost:7000/eureka,http://localhost:7001/eureka,http://localhost:7002/eureka
   instance:
     instance-id: provider-user-8005        #定义微服务的名称
+    prefer-ip-address: true                #是否显示IP和端口
+
+#mybatis-plush配置
+mybatis-plus:
+  type-aliases-package: com.jt.springcloud.pojo
+  mapper-locations: classpath:/mybatis/mappers/*.xml
+  configuration:
+    map-underscore-to-camel-case: true  #自动开启驼峰规则映射
